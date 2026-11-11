@@ -24,8 +24,14 @@ The page is intentionally a concise company introduction and progress statement.
 
 ## Hosting status
 
-The GitHub Pages copy is served from:
+The GitHub Pages site source is:
 
 <https://huezoricardo91.github.io/infinite-economy-corporation/>
 
-The custom domain <https://infiniteeconomycorporation.com> currently serves a Squarespace “under construction” page. Updating the GitHub Pages files does not change the custom domain by itself; the Squarespace domain/DNS account must be connected to GitHub Pages before the official `.com` displays this version.
+The repository and GitHub Pages settings now specify `infiniteeconomycorporation.com` as the custom domain. The domain’s DNS still points at the Squarespace under-construction page, so the `.com` has not switched yet. Finish that DNS connection in Squarespace Domains:
+
+- Apex (`@`) A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+- `www` CNAME: `huezoricardo91.github.io`.
+- Remove conflicting Squarespace parking A/AAAA records for the web hostnames; leave any mail-related records intact.
+
+GitHub recommends configuring all four A records for the apex and using a `www` CNAME. DNS propagation can take up to 24 hours. Once DNS points to GitHub Pages, verify the domain and enable HTTPS in repository Pages settings. Source: [GitHub Pages custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
