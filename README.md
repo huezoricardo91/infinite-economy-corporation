@@ -8,4 +8,4 @@ Public website. First page only — we will add to it as the company takes shape
 - `404.html` — missing-page page
 - `favicon.svg` — small square mark
 
-Meant to be hosted for free on GitHub Pages.
+Live (free, GitHub Pages): https://huezoricardo91.github.io/infinite-economy-corporation/
