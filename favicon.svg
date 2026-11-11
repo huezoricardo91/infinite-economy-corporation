@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Infinite Economy Corporation">
-  <rect width="32" height="32" fill="#1b1814"/>
-  <rect x="6.5" y="6.5" width="19" height="19" fill="none" stroke="#f3eee4" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Infinite Economy Corporation">
+  <rect width="64" height="64" rx="32" fill="#f3eee4"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#1b1814" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#66725c" stroke-width="1"/>
+  <text x="32" y="36" text-anchor="middle" fill="#1b1814" font-family="Georgia,serif" font-size="14">IE</text>
 </svg>

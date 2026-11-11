@@ -1,55 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eee4">
   <title>Not here yet — Infinite Economy Corporation</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@36..144,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --paper: #f3eee4;
-      --ink: #1b1814;
-      --mute: #6a6358;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body {
-      min-height: 100dvh;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Source Sans 3", "Segoe UI", sans-serif;
-      display: grid;
-      place-content: center;
-      padding: 1.5rem;
-    }
-    h1 {
-      margin: 0 0 0.75rem;
-      font-family: Fraunces, Georgia, serif;
-      font-weight: 500;
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
-      letter-spacing: -0.03em;
-    }
-    p { margin: 0 0 1.5rem; color: var(--mute); }
-    a {
-      color: var(--ink);
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-bottom: 1px solid var(--ink);
-    }
-    a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+    :root{--paper:#f3eee4;--ink:#1b1814;--copy:#554f46;--muted:#6d6559;--line:#cfc4ae;--olive:#66725c;--serif:'Fraunces','Iowan Old Style',Georgia,serif;--sans:'DM Sans','Segoe UI',sans-serif;--mono:'DM Mono',ui-monospace,monospace}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%}
+    body{min-height:100svh;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);display:grid;grid-template-rows:auto 1fr auto}
+    .shell{width:min(1080px,calc(100% - 48px));margin-inline:auto}
+    header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center}
+    .brand{font:500 11px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:12px}
+    .brand-mark{width:32px;height:32px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:9px;letter-spacing:0;position:relative}
+    .brand-mark::after{content:"";position:absolute;inset:5px;border:1px solid var(--olive);border-radius:50%}
+    main{width:min(780px,calc(100% - 48px));margin:auto;padding:100px 0}
+    .label{font:400 10px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+    .label::before{content:"";width:24px;height:1px;background:var(--olive)}
+    h1{font:400 clamp(52px,9vw,96px)/.96 var(--serif);letter-spacing:-.05em;margin:28px 0 22px}
+    h1 em{color:var(--olive);font-weight:400}
+    p{max-width:50ch;color:var(--copy);font-size:18px;line-height:1.7;margin:0 0 34px}
+    a.back{display:inline-flex;gap:12px;align-items:center;border:1px solid var(--ink);border-radius:999px;padding:13px 19px;text-decoration:none;color:var(--ink);font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s}
+    a.back:hover{background:var(--ink);color:var(--paper)}
+    a:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font:400 10px/1.5 var(--mono);letter-spacing:.08em}
+    @media(max-width:560px){.shell,main{width:calc(100% - 36px)}main{padding:72px 0}p{font-size:16px}}
   </style>
 </head>
 <body>
+  <header><div class="shell"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">IE</span><span>Infinite Economy<br>Corporation</span></a></div></header>
   <main>
-    <h1>This page is not here yet.</h1>
-    <p>Infinite Economy Corporation is just getting started.</p>
-    <a href="./">Back to the front page</a>
+    <div class="label">A wrong turn — easily fixed</div>
+    <h1>This page isn’t <em>here yet.</em></h1>
+    <p>The company is at the beginning. The public work will appear on the front page as it takes shape.</p>
+    <a class="back" href="./">Back to the beginning <span aria-hidden="true">→</span></a>
   </main>
+  <footer><div class="shell">© <span id="year">2026</span> Infinite Economy Corporation</div></footer>
+  <script>document.getElementById('year').textContent=String(new Date().getFullYear())</script>
 </body>
 </html>
